@@ -20,7 +20,7 @@ mv -f ~/.vim ~/.vim_old
 mv -f ~/vim ~/.vim
 mv -f ~/.vimrc ~/.vimrc_old
 cp -f ~/.vim/_vimrc ~/.vimrc
-#git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 echo "yuchao86正在努力为您安装bundle程序" > yuchao86
 echo "安装完毕将自动退出" >> yuchao86
 echo "请耐心等待" >> yuchao86
