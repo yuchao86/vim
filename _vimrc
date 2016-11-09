@@ -58,6 +58,9 @@ let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 "Processing... % (ctrl+c to stop)
 let g:fencview_autodetect=0
 set rtp+=$GOROOT/misc/vim
+
+let mapleader=","
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 显示相关  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -464,9 +467,7 @@ Bundle 'CaptureClipboard'
 Bundle 'ctrlp-modified.vim'
 Bundle 'last_edit_marker.vim'
 Bundle 'synmark.vim'
-"Bundle 'Python-mode-klen'
 Bundle 'SQLComplete.vim'
-Bundle 'Javascript-OmniCompletion-with-YUI-and-j'
 "Bundle 'JavaScript-Indent'
 "Bundle 'Better-Javascript-Indentation'
 Bundle 'jslint.vim'
@@ -477,8 +478,10 @@ Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'jsbeautify'
 Bundle 'The-NERD-Commenter'
 "django
-Bundle 'django_templates.vim'
-Bundle 'Django-Projects'
+"Bundle 'django_templates.vim'
+"Bundle 'Django-Projects'
+
+Bundle 'Valloric/YouCompleteMe'
 
 "Bundle 'FredKSchott/CoVim'
 "Bundle 'djangojump'
@@ -499,6 +502,10 @@ let g:ctrlp_custom_ignore = '\v\.(exe|so|dll)$'
 let g:ctrlp_extensions = ['funky']
 
 let NERDTreeIgnore=['\.pyc']
-
-
-
+"for ycm
+let g:ycm_error_symbol = '>>'
+let g:ycm_warning_symbol = '>*'
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nmap <F4> :YcmDiags<CR>
